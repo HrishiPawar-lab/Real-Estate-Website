@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shapoorji Pallonji Skyraa</title>
+  <!-- Links -->
+
+  <!-- CDNS -->
+  <link rel="stylesheet" href="./static/css/aos.css" />
+  <link rel="stylesheet" href="./static/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="./static/css/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="./static/css/style.css" />
+  <link rel="stylesheet" href="./static/css/bootstrap.min.css" />
+  <!-- Local files (Style) -->
+  <!-- SITE KEY & ReCaptcha -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfLaWUoAAAAAI3Z_PbmTI2JAUmnv6IS4-l-moPH"></script>
+</head>
+<body>
+
+  <!-- Modal  -->
+  <div class="modal fade mainModal shadow" id="pricingModal" tabindex="-1" data-bs-backdrop="
+  static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="pricingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="dismiss-btn mb-4" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fal fa-times"></i>
+          </button>
+          <div class="row g-4">
+            <div class="col-lg-12">
+              <form method="POST" class="contactForm" action="./contact-modal-handler.php">
+                <h4 class="mb-4">Have a question? <span class="text-primary">Contact Us</span></h4>
+                <input type="hidden" name="type" class="hidden-value" value="Any" />
+                <div class="form-floating ">
+                  <input type="text" class="" id="floatingName" placeholder="Full Name" name="name" required />
+                </div>
+                <div class="form-floating ">
+                  <input type="number" class="" id="floatingPhone" placeholder="Mobile Number" name="phone" required />
+                </div>
+                <div class="form-floating ">
+                  <input type="email" class="" id="floatingEmail" placeholder="Email Address" name="email" />
+                </div>
+                <select class="form-select form-select-md mb-4" aria-label=".form-select-lg example">
+                  <option selected value="">Unit Pricing </option>
+                  <option value="2bhk">2 Bhk</option>
+                  <option value="3bhk">3 Bhk</option>
+                </select>
+                <input type="hidden" name="recaptcha_response" id="recaptchaResponse" />
+                <script>
+                  // SITE KEY
+                  grecaptcha.ready(function () {
+                    grecaptcha
+                      .execute("6Lezyw8pAAAAAM_00gPZY3v96Yku4wEuAsIl_Ank", {
+                        action: "contact",
+                      })
+                      .then(function (token) {
+                        var recaptchaResponse =
+                          document.getElementById("recaptchaResponse");
+                        recaptchaResponse.value = token;
+                      });
+                  });
+                </script>
+                <button type="submit" class="button">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal  -->
+
+
+  <!-- Header -->
+  <header class="header" data-aos="fade-down" data-aos-duration="1200">
+    <div class="container-fluid px-lg-3">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">
+          <img src="./static/images/logo.svg" class="brand-logo-image" alt="logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fal fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse align-items-start" id="navbarSupportedContent">
+          <ul class="navbar-nav    mb-2">
+            <li class="nav-item mb-2">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link" href="#about-us">About</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link" href="#ameneties">Ameneties</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link" href="#location">Location</a>
+            </li>
+          </ul>
+          <div>
+            <a href="#" class="button" data-bs-target="#pricingModal" data-bs-toggle="modal">Download Brochure</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- Header -->
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner h-100">
+          <div class="carousel-item h-100 active parallax-slide">
+            <img src="./static/images/hero/banner.jpg" class="d-block w-100 h-100" alt="...">
+            <div class="heroText animate__animated animate__fadeInUp hero-text ">
+              <h2 class="heading">Elegant Homes For
+                <br>
+                Your Loved Ones
+              </h2>
+              <a href="#" class="button">Enquire Now</a>
+            </div>
+          </div>
+          <div class="carousel-item h-100 parallax-slide">
+            <img src="./static/images/hero/banner_3.jpg" class="d-block w-100 h-100" alt="...">
+            <div class="heroText animate__animated animate__fadeInUp hero-text ">
+              <h2 class="heading">Book Your Dream
+                <br>
+                Home
+              </h2>
+              <a href="#" class="button">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+        <button class="h-100 carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true">
+            <i class="fas fa-arrow-left"></i>
+          </span>
+        </button>
+        <button class="h-100 carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true">
+            <i class="fas fa-arrow-right"></i>
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- Hero -->
+
+  <!-- About Us -->
+  <section class="section about-us" id="about-us">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-7 pe-5">
+          <h2 class="sub-heading mb-4 text-primary" data-aos="fade-up" data-aos-duration="1200">About Shapoorji Pallonji
+            Skyraa</h2>
+          <p data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+            Skyraa is a 51-storey tower and one of the tallest in Thane. Skyraa brings you meticulously crafted
+            lifestyle apartments and exclusive garden homes. Experience luxury at its finest with 60+ amenities and an
+            exquisite Clubhouse: Float, on the 51st Level, and a rooftop sky lounge which offers breath-taking views of
+            the city.
+          </p>
+          <p class="mt-2" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+            Flanked by the Yeoor hills, the Upvan lake, and home to the Creek Flamingo Sanctuary, Thane brings you a
+            premium lifestyle with easy access to the city. With unrestricted views from your perch in the sky, you can
+            take in all of nature’s beauty while being nestled amid a bustling city.
+          </p>
+          <div data-aos-duration="1200" data-aos="fade-up" class="mt-4" data-aos-delay="400">
+            <a href="#" class="button">Download Brochure</a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="card shadow-sm">
+            <div class="card-header bg-first">
+              <h3 class="sub-heading text-dark text-center" data-aos="fade-up" data-aos-duration="1200"
+                data-aos-delay="100">Get In Touch With Us</h3>
+            </div>
+            <div class="card-body p-lg-5">
+              <form class="form">
+                <input type="hidden" name="type" class="hidden-value" value="Any">
+                <div class="form-floating mb-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                  <input type="text" class="form-control" id="floatingName" placeholder="Full Name" name="name"
+                    required="">
+                  <label for="floatingName">Full Name</label>
+                </div>
+                <div class="form-floating mb-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+                  <input type="number" class="form-control" id="floatingPhone" placeholder="Mobile Number" name="phone"
+                    required="">
+                  <label for="floatingPhone">Mobile Number</label>
+                </div>
+                <div class="form-floating mb-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                  <input type="email" class="form-control" id="floatingEmail" placeholder="Email Address" name="email">
+                  <label for="floatingEmail">Email Address</label>
+                </div>
+                <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                <script>
+                  // SITE KEY
+                  grecaptcha.ready(function () {
+                    grecaptcha
+                      .execute("6Lezyw8pAAAAAM_00gPZY3v96Yku4wEuAsIl_Ank", {
+                        action: "contact",
+                      })
+                      .then(function (token) {
+                        var recaptchaResponse =
+                          document.getElementById("recaptchaResponse");
+                        recaptchaResponse.value = token;
+                      });
+                  });
+                </script>
+                <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+                  <button type="submit" class="button w-100">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Us -->
+
+  <!-- Pricing -->
+  <section class="section bg-second pricing" id="pricing">
+    <div class="container">
+      <h2 class="sub-heading text-primary" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">Pricing</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="400">
+          <div class="img-thumbnail">
+            <img src="./static/images/pricing/3bhk.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="400">
+          <div class="img-thumbnail">
+            <img src="./static/images/pricing/4bhk.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="400">
+          <div class="price-box p-4">
+            <h3 class="sub-heading mb-1">3 BHK</h3>
+            <p>
+              Starting at Rs. 3.24 Cr *
+              <br>
+              <small>(Inclusive of all taxes)</small>
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="400">
+          <div class="price-box p-4">
+            <h3 class="sub-heading mb-1">4 BHK</h3>
+            <p>
+              Starting at Rs. 3.82 Cr.*
+              <br>
+              <small>(Inclusive of all taxes)</small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Pricing -->
+
+
+  <!-- Ameneties -->
+  <section class="ameneties" id="ameneties">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5"></div>
+        <div class="col-lg-7 bg-white p-5">
+          <h2 class="sub-heading text-primary text-center mb-4" data-aos="zoom-in" data-aos-duration="1200"
+            data-aos-delay="200">Ameneties</h2>
+          <div class="row amenities-grid g-4">
+            <div class="col-md-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+              <div class="icon">
+                <img src="./static/images/ameneties/01.png" alt="">
+                <h3 class="amenity">Gym</h3>
+              </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+              <div class="icon">
+                <img src="./static/images/ameneties/02.png" alt="">
+                <h3 class="amenity">Inhouse Gaming</h3>
+              </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+              <div class="icon">
+                <img src="./static/images/ameneties/04.png" alt="">
+                <h3 class="amenity">Inhouse Library</h3>
+              </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+              <div class="icon">
+                <img src="./static/images/ameneties/05.png" alt="">
+                <h3 class="amenity">Sauna</h3>
+              </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+              <div class="icon">
+                <img src="./static/images/ameneties/06.png" alt="">
+                <h3 class="amenity">Sauna</h3>
+              </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+              <div class="icon">
+                <img src="./static/images/ameneties/07.png" alt="">
+                <h3 class="amenity">Spa</h3>
+              </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+              <div class="icon">
+                <img src="./static/images/ameneties/08.png" alt="">
+                <h3 class="amenity">Swimming Pool</h3>
+              </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+              <div class="icon">
+                <img src="./static/images/ameneties/09.png" alt="">
+                <h3 class="amenity">Terrace Barbecue</h3>
+              </div>
+            </div>
+            <div class="col-md-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+              <div class="icon">
+                <img src="./static/images/ameneties/10.png" alt="">
+                <h3 class="amenity">Music Room</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- Ameneties -->
+
+
+  <!-- Gallery -->
+  <section class="section gallery bg-second" id="gallery">
+    <div class="container ">
+      <h2 class="sub-heading mb-4 text-center text-primary" data-aos="fade-up" data-aos-duration="1200"
+        data-aos-delay="400">Photo Gallery</h2>
+      <div class="row g-4 justify-content-start">
+        <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+          <div class="image">
+            <img src="./static/images/gallery/1.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+          <div class="image">
+            <img src="./static/images/gallery/2.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+          <div class="image">
+            <img src="./static/images/gallery/3.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+          <div class="image">
+            <img src="./static/images/gallery/4.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+          <div class="image">
+            <img src="./static/images/gallery/5.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+          <div class="image">
+            <img src="./static/images/gallery/6.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+          <div class="image">
+            <img src="./static/images/gallery/7.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+          <div class="image">
+            <img src="./static/images/gallery/8.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+          <div class="image">
+            <img src="./static/images/gallery/10.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Gallery -->
+
+
+  <section class="section map" id="location">
+    <div class="container">
+      <h2 class="sub-heading mb-4 text-center text-primary" data-aos="fade-up" data-aos-duration="1200"
+        data-aos-delay="400">Location</h2>
+      <div data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="700">
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1883.7171524027967!2d72.9592477507414!3d19.2198950115071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b96563dea871%3A0x31880d7578a12660!2sShapoorji%20Pallonji%20Skyraa!5e0!3m2!1sen!2sin!4v1704349722617!5m2!1sen!2sin"
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer section">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4">
+          <div class="footer-logo">
+            <img src="./static/images/logo.svg" alt="">
+          </div>
+          <p class="mt-4">
+            Experience a piece of paradise as you claim your piece of the sky. With over 60 amenities and features to
+            spoil you, there’s never a dull moment at Skyraa.
+          </p>
+          <ul class="mt-4 ps-0 d-flex gap-3">
+            <li class="mb-3 icons"><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li class="mb-3 icons"><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li class="mb-3 icons"><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            <li class="mb-3 icons"><a href="#"><i class="fab fa-youtube"></i></a></li>
+            <li class="icons"><a href="#"><i class="fab fa-facebook"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h3 class="sub-heading mb-4">Reach Us At</h3>
+          <p class="mb-2">
+            6X95+VV5 Pokharan Road Number 2 Subhash Nagar, Maharashtra 400610
+          </p>
+          <a href="tel:099671 13356">
+            99671 13356
+          </a>
+        </div>
+        <div class="col-lg-4 ">
+          <h3 class="sub-heading mb-4">Quick Links</h3>
+          <ul role="list" class="p-0">
+            <li class="nav-item mb-2">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link" href="#about-us">About</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link" href="#ameneties">Ameneties</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a class="nav-link" href="#location">Location</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <div class="container pt-4">
+        <div class="row">
+          <div class="col-md-6">
+            <p>
+              ©2023 Shapoorji Pallonji Group
+            </p>
+          </div>
+          <div class="col-md-6 text-end">
+            <p>Powered by <a href="https://parasightsolutions.com/" target="_blank">Parasight Solutions</a> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <div class="whatsapp-button">
+    <a target="_blank" href="https://wa.me/9819348316/?text=Hello">
+      <div class="icon">
+        <i class="fab fa-whatsapp"></i>
+      </div>
+    </a>
+  </div>
+
+
+
+  <!-- Scripts -->
+
+  <script src="./static/js/bootstrap.bundle.min.js"></script>
+  <!-- Jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <!-- CDNS -->
+  <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+
+  <!-- Local Files (App) -->
+  <script src="./static/js/owl.carousel.js"></script>
+  <script src="./static/js/slick.min.js"></script>
+  <script src="./static/js/aos.js"></script>
+  <script src="./static/js/app.js"></script>
+  <!-- Script Tag -->
+
+
+  <script>
+    AOS.init();
+  </script>
+
+  <script>
+    const header = document.querySelector(".header");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        header.classList.add("sticky")
+      } else {
+        header.classList.remove("sticky")
+      }
+    })
+
+
+
+  </script>
+</body>
+</html>

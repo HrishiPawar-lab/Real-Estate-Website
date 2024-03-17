@@ -1,0 +1,278 @@
+/* Variables Import */
+@import "./variables.css";
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 0.5s ease-in-out;
+}
+
+.header.sticky {
+    background-color: var(--primary);
+}
+
+.navbar-brand {
+    width: 200px;
+}
+
+.navbar {
+    justify-content: space-between !important;
+}
+
+.navbar-collapse {
+    flex-grow: 0 !important;
+}
+
+.header .navbar .nav-link,
+.header .navbar .nav-link.active {
+    color: var(--light-alt);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Header */
+
+
+/* Hero */
+.hero {
+    position: sticky;
+    top: 0;
+    min-height: 100vh;
+    overflow: hidden !important;
+    z-index: -1;
+}
+
+#heroCarousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 12;
+    overflow: hidden !important;
+
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background: transparent !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    border: 1px solid var(--light-alt) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 0;
+    font-size: 12px;
+    transition: all 0.5s ease;
+}
+
+.carousel-control-prev-icon {
+    transform: translateX(100px);
+}
+
+.carousel-control-next-icon {
+    transform: translateX(-100px);
+}
+
+#heroCarousel:hover .carousel-control-prev-icon,
+#heroCarousel:hover .carousel-control-next-icon {
+    transform: translateX(0px);
+    transition: all 0.5s ease;
+    opacity: 1;
+}
+
+.hero .heroText {
+    position: absolute;
+    top: 50%;
+    left: 300px;
+    transform: translateY(-50%);
+    z-index: 3;
+    width: 600px;
+}
+
+.hero .heroText .heading {
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    border-bottom: 2px solid var(--primary) !important;
+}
+
+.form .button {
+    border-radius: 6px;
+    padding: 15px !important;
+}
+
+/* Hero */
+
+
+/* Gallery */
+.gallery {}
+
+.gallery .image {
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.gallery .image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Gallery */
+
+
+/* Map */
+.map iframe {
+    border-radius: 8px !important;
+}
+
+/* Map */
+
+/* Ameneties */
+.ameneties {
+    background: url("../images/ameneties/01.jpg") no-repeat center center/cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.ameneties::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0, 1);
+    width: 100%;
+    height: 100%;
+}
+
+.icon {
+    text-align: center;
+}
+
+.icon .amenity {
+    font-size: 17px;
+    text-transform: capitalize;
+    font-family: var(--headings);
+    margin-top: 10px;
+    font-weight: 400;
+    color: var(--primary);
+}
+
+.icon img {
+    /* filter: invert(1); */
+    width: 50px;
+}
+
+.ameneties .icon {
+    background-color: #e8ebf1bb;
+    padding: 10px;
+    height: 100%;
+    border-radius: 6px;
+}
+
+/* Ameneties */
+
+
+/* Footer */
+.footer {
+    background-color: #001F3F;
+}
+
+.footer p,
+.footer h3,
+.footer a {
+    color: var(--white);
+}
+
+.footer a:hover {
+    color: var(--white);
+}
+
+.footer .footer-logo {
+    width: 300px;
+}
+
+.footer .icons {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    font-size: 20px;
+}
+
+.footer .icons i {
+    color: var(--primary) !important;
+}
+
+.footer .copyright .container {
+    border-top: 1px solid #666666;
+}
+
+.price-box {
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 5px;
+}
+
+.price-box p {
+    color: var(--white);
+}
+
+/* Footer */
+
+
+.modal-dialog {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal.fade .modal-dialog {
+    transform: translate(0, -100%);
+}
+
+.modal.in .modal-dialog {
+    transform: translate(0, 0);
+}
+
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 999;
+}
+
+
+
+.whatsapp-button .icon {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #25d366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp-button i {
+    font-size: 25px;
+    border-radius: 50%;
+    color: #fff;
+}
